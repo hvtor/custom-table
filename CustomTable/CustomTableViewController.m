@@ -22,9 +22,11 @@
     [super viewDidLoad];
     
 
-    recipeNames = @[@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini"];
+    recipeNames = @[@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee",
+                    @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini"];
     
-    recipePrepTime = @[@"20 min", @"45 min", @"30 min", @"20 min", @"20 min", @"1 hr",@"1 hr", @"10 min", @"30 min", @"15 min", @"30 min", @"30 min", @"15 min", @"45 min", @"1 hr", @"30 min"];
+    recipePrepTime = @[@"20 min", @"45 min", @"30 min", @"20 min", @"20 min", @"1 hr",@"1 hr", @"10 min", @"30 min", @"15 min",
+                       @"30 min", @"30 min", @"15 min", @"45 min", @"1 hr", @"30 min"];
     
     
     recipeImages = @[@"egg_benedict.jpg", @"mushroom_risotto.jpg", @"full_breakfast.jpg",
@@ -70,6 +72,17 @@
         cell.thumbnailImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
         return cell;
     }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *recipeName = [recipeNames objectAtIndex:indexPath.row];
+    UIAlertView *messageAlert = [[UIAlertView alloc]initWithTitle:@"Row Selected" message:recipeName delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [messageAlert show];
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+}
 
 /*
 // Override to support conditional editing of the table view.
