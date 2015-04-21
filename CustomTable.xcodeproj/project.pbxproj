@@ -16,6 +16,7 @@
 		E90E5A5E1ADDACC800B0F285 /* CustomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E5A5D1ADDACC800B0F285 /* CustomTableViewController.m */; };
 		E90E5A611ADDB69700B0F285 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E5A601ADDB69700B0F285 /* CustomTableViewCell.m */; };
 		E9848ED91AE58AFF003A8D35 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = E9848ED81AE58AFF003A8D35 /* Recipe.m */; };
+		E9848F4F1AE6E341003A8D35 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9848F4E1AE6E341003A8D35 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		E90E5A601ADDB69700B0F285 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		E9848ED71AE58AFF003A8D35 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		E9848ED81AE58AFF003A8D35 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
+		E9848F4D1AE6E341003A8D35 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = CustomTable/DetailViewController.h; sourceTree = "<group>"; };
+		E9848F4E1AE6E341003A8D35 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = CustomTable/DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 		E90E5A261ADDA87F00B0F285 = {
 			isa = PBXGroup;
 			children = (
+				E9848F4C1AE6E29B003A8D35 /* DetailViewController */,
 				E90E5A5A1ADDA90200B0F285 /* CustomTableViewControllers */,
 				E90E5A311ADDA87F00B0F285 /* CustomTable */,
 				E90E5A4B1ADDA87F00B0F285 /* CustomTableTests */,
@@ -144,6 +148,15 @@
 				E9848ED81AE58AFF003A8D35 /* Recipe.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E9848F4C1AE6E29B003A8D35 /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E9848F4D1AE6E341003A8D35 /* DetailViewController.h */,
+				E9848F4E1AE6E341003A8D35 /* DetailViewController.m */,
+			);
+			name = DetailViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +264,7 @@
 				E90E5A5E1ADDACC800B0F285 /* CustomTableViewController.m in Sources */,
 				E90E5A611ADDB69700B0F285 /* CustomTableViewCell.m in Sources */,
 				E90E5A351ADDA87F00B0F285 /* main.m in Sources */,
+				E9848F4F1AE6E341003A8D35 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

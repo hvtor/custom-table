@@ -10,9 +10,9 @@
 
 @interface Recipe : NSObject
 
-//@property (nonatomic, copy) NSString *recipeName;
-//@property (nonatomic,copy) NSString *recipeImages;
-//@property (nonatomic, copy) NSString *recipePrepTime;
-//@property (nonatomic, assign) BOOL isChecked;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic,copy) NSString *images;
+@property (nonatomic, copy) NSString *prepTime;
+@property (nonatomic, assign) BOOL isChecked;
 
 @end
