@@ -11,6 +11,4 @@
 
 @interface CustomTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
-
 @end
