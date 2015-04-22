@@ -72,6 +72,7 @@
 		E90E5A261ADDA87F00B0F285 = {
 			isa = PBXGroup;
 			children = (
+				E9848EDA1AE58C37003A8D35 /* Model */,
 				E9848F4C1AE6E29B003A8D35 /* DetailViewController */,
 				E90E5A5A1ADDA90200B0F285 /* CustomTableViewControllers */,
 				E90E5A311ADDA87F00B0F285 /* CustomTable */,
@@ -135,7 +136,6 @@
 			children = (
 				E90E5A5C1ADDACC800B0F285 /* CustomTableViewController.h */,
 				E90E5A5D1ADDACC800B0F285 /* CustomTableViewController.m */,
-				E9848EDA1AE58C37003A8D35 /* Model */,
 			);
 			name = CustomTableViewControllers;
 			path = CustomTable.xcodeproj;
@@ -148,6 +148,7 @@
 				E9848ED81AE58AFF003A8D35 /* Recipe.m */,
 			);
 			name = Model;
+			path = CustomTable.xcodeproj;
 			sourceTree = "<group>";
 		};
 		E9848F4C1AE6E29B003A8D35 /* DetailViewController */ = {

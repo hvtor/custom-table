@@ -42,6 +42,27 @@
         tmp.isChecked = NO;
         [_recipe addObject:tmp];
     }
+    
+    //Creating plist file
+    
+    [self setUpPlistFile];
+    
+}
+
+-(void)setUpPlistFile
+{
+//    - NSArray * NSSearchPathForDirectoriesInDomains ( NSSearchPathDirectory directory, NSSearchPathDomainMask domainMask, BOOL expandTilde ) {
+//        
+//    }
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSURL *url = [manager URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+    NSArray *filePaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *plistName = @"recipe.plist";
+    NSString *fullPlistPath = [url.path stringByAppendingPathComponent:plistName];
+    BOOL result = [manager createFileAtPath:fullPlistPath contents:nil attributes:nil];
+    
+    NSDictionary *test = @{@"recipeName":@"test"};
+    [test writeToFile:fullPlistPath atomically:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -92,23 +113,21 @@
     rep.isChecked = YES;
 }
 
-//-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    NSIndexPath *oldIndex = [self.tableView indexPathForSelectedRow];
-//    Recipe *rep = _recipe[oldIndex.row];
-//    rep.isChecked = NO;
-//    [tableView reloadData];
-//    return indexPath;
-//}
-//
+-(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *oldIndex = [self.tableView indexPathForSelectedRow];
+    Recipe *rep = _recipe[oldIndex.row];
+    rep.isChecked = NO;
+    [tableView reloadData];
+    return indexPath;
+}
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:
 (UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [_recipe removeObjectAtIndex:indexPath.row];
-
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 
 }
-
 
 
 @end
