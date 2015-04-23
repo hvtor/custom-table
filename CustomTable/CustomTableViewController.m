@@ -49,7 +49,7 @@
     
 }
 
--(void)setUpPlistFile
+-(NSString *)setUpPlistFile
 {
 //    - NSArray * NSSearchPathForDirectoriesInDomains ( NSSearchPathDirectory directory, NSSearchPathDomainMask domainMask, BOOL expandTilde ) {
 //        
@@ -61,8 +61,7 @@
     NSString *fullPlistPath = [url.path stringByAppendingPathComponent:plistName];
     BOOL result = [manager createFileAtPath:fullPlistPath contents:nil attributes:nil];
     
-    NSDictionary *test = @{@"recipeName":@"test"};
-    [test writeToFile:fullPlistPath atomically:YES];
+    return fullPlistPath;
 }
 
 - (void)didReceiveMemoryWarning {
