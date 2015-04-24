@@ -97,26 +97,50 @@
     cell.prepTimeLabel.text = recipe.prepTime;
     
     // Check to see if recipeChecked array is Checked (YES) or IsNotChecked(NO)
-    cell.accessoryType = recipe.isChecked ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+//    cell.accessoryType =UITableViewCellAccessoryDisclosureIndicator;
     
     // Array of images in array named recipeImages
-    cell.thumbnailImageView.image = [UIImage imageNamed:recipe.images];
+    cell.backgroundImageView.image = [UIImage imageNamed:recipe.images];
+
+    cell.nameLabel.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.80f];
+    
+    cell.prepTimeLabel.backgroundColor = [UIColor clearColor];
+    
+//    // create effect
+//   UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+//    
+//    // add effect to an effect view
+//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+//    effectView.frame = cell.nameLabel.frame;
+//    
+//    // add the effect view to the image view
+//    [cell.nameLabel insertSubview:effectView belowSubview:cell.nameLabel];
+   
+    
+    
+
+
+
     return cell;
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    return NO;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    Recipe *rep = _recipe[indexPath.row];
-    rep.isChecked = YES;
+
+//    [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionTop];
+
+
 }
 
 -(NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSIndexPath *oldIndex = [self.tableView indexPathForSelectedRow];
-    Recipe *rep = _recipe[oldIndex.row];
-    rep.isChecked = NO;
-    [tableView reloadData];
+   
+    
     return indexPath;
 }
 
