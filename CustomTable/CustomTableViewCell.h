@@ -14,6 +14,8 @@
 
 @interface CustomTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIView *tintColor;
+
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *prepTimeLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;

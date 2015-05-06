@@ -20,6 +20,7 @@
     BOOL recipeChecked[10];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -96,30 +97,17 @@
     cell.nameLabel.text = recipe.name;
     cell.prepTimeLabel.text = recipe.prepTime;
     
+    cell.nameLabel.textColor = [UIColor blackColor];
+    cell.prepTimeLabel.textColor = [UIColor blackColor];
     // Check to see if recipeChecked array is Checked (YES) or IsNotChecked(NO)
-//    cell.accessoryType =UITableViewCellAccessoryDisclosureIndicator;
+    
     
     // Array of images in array named recipeImages
     cell.backgroundImageView.image = [UIImage imageNamed:recipe.images];
-
-    cell.nameLabel.backgroundColor = [UIColor colorWithRed:0.0f green:0.0f blue:0.0f alpha:0.80f];
+    
     
     cell.prepTimeLabel.backgroundColor = [UIColor clearColor];
-    
-//    // create effect
-//   UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-//    
-//    // add effect to an effect view
-//    UIVisualEffectView *effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
-//    effectView.frame = cell.nameLabel.frame;
-//    
-//    // add the effect view to the image view
-//    [cell.nameLabel insertSubview:effectView belowSubview:cell.nameLabel];
-   
-    
-    
-
-
+    cell.backgroundImageView.backgroundColor = [UIColor grayColor];
 
     return cell;
 }

@@ -17,6 +17,8 @@
 		E90E5A611ADDB69700B0F285 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E5A601ADDB69700B0F285 /* CustomTableViewCell.m */; };
 		E95278431AE9C74E0047E936 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95278421AE9C74E0047E936 /* CoreImage.framework */; };
 		E95278451AE9C7590047E936 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E95278441AE9C7590047E936 /* QuartzCore.framework */; };
+		E95278481AEA06720047E936 /* heartEmpty1.png in Resources */ = {isa = PBXBuildFile; fileRef = E95278461AEA06720047E936 /* heartEmpty1.png */; };
+		E95278491AEA06720047E936 /* heartFull1.png in Resources */ = {isa = PBXBuildFile; fileRef = E95278471AEA06720047E936 /* heartFull1.png */; };
 		E9848ED91AE58AFF003A8D35 /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = E9848ED81AE58AFF003A8D35 /* Recipe.m */; };
 		E9848F4F1AE6E341003A8D35 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9848F4E1AE6E341003A8D35 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -49,6 +51,8 @@
 		E90E5A601ADDB69700B0F285 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		E95278421AE9C74E0047E936 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		E95278441AE9C7590047E936 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E95278461AEA06720047E936 /* heartEmpty1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heartEmpty1.png; path = ../../../../../Desktop/heartEmpty1.png; sourceTree = "<group>"; };
+		E95278471AEA06720047E936 /* heartFull1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heartFull1.png; path = ../../../../../Desktop/heartFull1.png; sourceTree = "<group>"; };
 		E9848ED71AE58AFF003A8D35 /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
 		E9848ED81AE58AFF003A8D35 /* Recipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipe.m; sourceTree = "<group>"; };
 		E9848F4D1AE6E341003A8D35 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = CustomTable/DetailViewController.h; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		E90E5A4C1ADDA87F00B0F285 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E95278461AEA06720047E936 /* heartEmpty1.png */,
+				E95278471AEA06720047E936 /* heartFull1.png */,
 				E90E5A4D1ADDA87F00B0F285 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -258,6 +264,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E95278481AEA06720047E936 /* heartEmpty1.png in Resources */,
+				E95278491AEA06720047E936 /* heartFull1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "CustomTableViewCell.h"
 
-@interface CustomTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource>
+@interface CustomTableViewController : UITableViewController<UITableViewDelegate,UITableViewDataSource,UIScrollViewDelegate>
 
 @end
